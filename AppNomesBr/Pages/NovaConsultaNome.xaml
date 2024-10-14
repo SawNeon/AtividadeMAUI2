@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="AppNomesBr.Pages.NovaConsultaNome"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Meu Ranking">
+    <VerticalStackLayout>
+        <Label HorizontalOptions="Center"
+               Text="Insira o nome"
+               VerticalOptions="Center"
+               FontAttributes="Bold"
+               FontSize="18"
+               Margin="10, 0, 0, 0"/>
+
+        <Entry x:Name="TxtNome"
+               Placeholder="Pedro|Maria|Ana|Joao"
+               HorizontalTextAlignment="Center"
+               Margin="0, 100"/>
+
+        <Label Text="Escolha o Sexo para Registro"
+               FontAttributes="Bold"
+               FontSize="18"
+               HorizontalOptions="Center"
+               Margin="20, 0, 0, 0"/>
+
+        <Picker x:Name="PKSX"
+                Title="Sexo"
+                HorizontalTextAlignment="Center"
+                Margin="0, 100"/>
+
+        <Button x:Name="BtnPesquisar"
+                Text="Pesquisar" Margin="10"
+                CornerRadius="15"/>
+
+        <Button x:Name="BtnDeleteAll"
+                Text="Deletar Todos"
+                Margin="10"
+                CornerRadius="15"/>
+
+
+
+        <CollectionView x:Name="GrdNomesBr" VerticalOptions="FillAndExpand">
+            <CollectionView.Header>
+                <Grid Padding="5" BackgroundColor="LightBlue">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Label
+                        Grid.Column="0"
+                        FontAttributes="Bold"
+                        FontSize="14"
+                        Text="Nomes" />
+                    <Label
+                        Grid.Column="1"
+                        FontAttributes="Bold"
+                        FontSize="14"
+                        Text="Ocorrências" />
+                    <Label
+                        Grid.Column="2"
+                        FontAttributes="Bold"
+                        FontSize="14"
+                        Text="Pos. Ranking" />
+                    <Label
+                        Grid.Column="3"
+                        FontAttributes="Bold"
+                        FontSize="14"
+                        Text="Sexo" />
+                </Grid>
+            </CollectionView.Header>
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Padding="5">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Label
+                            Grid.Column="0"
+                            FontAttributes="Bold"
+                            FontSize="12"
+                            Text="{Binding Nome}" />
+                        <Label
+                            Grid.Column="1"
+                            FontAttributes="Bold"
+                            FontSize="12"
+                            Text="{Binding Frequencia}" />
+                        <Label
+                            Grid.Column="2"
+                            FontAttributes="Bold"
+                            FontSize="12"
+                            Text="{Binding Ranking}" />
+                        <Label
+                            Grid.Column="3"
+                            FontAttributes="Bold"
+                            FontSize="12"
+                            Text="{Binding Sexo}" />
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        <Picker
+            x:Name="PickerSexoFiltro"
+            Title="Filtrar por Sexo"
+            SelectedIndexChanged="PickerSexoFiltro_SelectedIndexChanged"
+            Margin="0, 100"
+            HorizontalTextAlignment="Center">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>M</x:String>
+                    <x:String>F</x:String>
+                    <x:String>Todas</x:String>
+
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+
+       
+    </VerticalStackLayout>
+</ContentPage>
