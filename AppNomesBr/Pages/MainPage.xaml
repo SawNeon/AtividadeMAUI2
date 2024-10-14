@@ -15,12 +15,12 @@
             <Label
                 SemanticProperties.HeadingLevel="Level1"
                 Style="{StaticResource Headline}"
-                Text="Seja Bem vindo!" />
+                Text="welcome to the underworld!" />
 
             <Label
                 SemanticProperties.HeadingLevel="Level2"
                 Style="{StaticResource SubHeadline}"
-                Text="Bem-vindo ao aplicativo de ranking de nomes" />
+                Text="Java is better than C#, mobile development is in Java or Kotlin!" />
 
             <Label
                 SemanticProperties.HeadingLevel="Level3"

@@ -10,12 +10,12 @@
                VerticalOptions="Center"
                FontAttributes="Bold"
                FontSize="18"
-               Margin="10, 0, 0, 0"/>
+               Margin="5, 0, 0, 0"/>
 
         <Entry x:Name="TxtNome"
                Placeholder="Pedro|Maria|Ana|Joao"
                HorizontalTextAlignment="Center"
-               Margin="0, 100"/>
+               Margin="0, 20"/>
 
         <Label Text="Escolha o Sexo para Registro"
                FontAttributes="Bold"
@@ -26,16 +26,14 @@
         <Picker x:Name="PKSX"
                 Title="Sexo"
                 HorizontalTextAlignment="Center"
-                Margin="0, 100"/>
+                Margin="0, 20"/>
 
         <Button x:Name="BtnPesquisar"
-                Text="Pesquisar" Margin="10"
-                CornerRadius="15"/>
+                Text="Pesquisar" Margin="10"/>
 
         <Button x:Name="BtnDeleteAll"
                 Text="Deletar Todos"
-                Margin="10"
-                CornerRadius="15"/>
+                Margin="10"/>
 
 
 

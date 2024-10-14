@@ -29,10 +29,11 @@
         <Setter Property="FontFamily" Value="Roboto"/>
         <Setter Property="FontSize" Value="16"/>
         <Setter Property="BorderWidth" Value="0"/>
-        <Setter Property="CornerRadius" Value="8"/>
+        <Setter Property="CornerRadius" Value="50"/>
         <Setter Property="Padding" Value="14,10"/>
         <Setter Property="MinimumHeightRequest" Value="10"/>
         <Setter Property="MinimumWidthRequest" Value="10"/>
+        <Setter Property="MaximumWidthRequest" Value="200"/>
         <Setter Property="VisualStateManager.VisualStateGroups">
             <VisualStateGroupList>
                 <VisualStateGroup x:Name="CommonStates">

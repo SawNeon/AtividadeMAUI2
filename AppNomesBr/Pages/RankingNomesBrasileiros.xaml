@@ -17,7 +17,7 @@
                         <Entry x:Name="CidadeEntry"
                                Placeholder="Insira o Município"
                                HorizontalTextAlignment="Center"
-                               Margin="0, 100"/>
+                               Margin="0, 20"/>
 
                         <StackLayout>
                             <Label Text="Escolha uma opção:"
@@ -43,7 +43,8 @@
                         
                         <Button x:Name="BtnAtualizar"
                                 Text="Atualizar Listagem"
-                                Margin="10" CornerRadius="15"/>
+                                Margin="10"
+                                MaximumWidthRequest="200"/>
 
                         <Grid Padding="5" BackgroundColor="LightBlue">
                             <Grid.ColumnDefinitions>
